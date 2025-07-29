@@ -110,7 +110,7 @@ function calculator(operation) {
   } else if (operation === 'multiply') {
     return (a, b) => a * b;
   } else {
-    return () => 'Invalid';
+    return () => 'Invalid';   
   }
 }
 const add = calculator('add');

@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOM Advanced Practice</title>
+  <style>
+    .box {
+      padding: 20px;
+      margin: 10px;
+      border: 2px solid #ccc;
+    }
+    .section {
+      height: 600px;
+      background-color: lightyellow;
+    }
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <script src="Bai1+2.js"></script>
+  <h1 id="title">Xin chào DOM</h1>
+  <button onclick="changeTitle()">Đổi tiêu đề</button>
+
+  <hr>
+
+  <!-- Bubbling & Capturing -->
+  <div class="box outer" style="background-color: lightblue">
+    Outer
+    <div class="box middle" style="background-color: lightgreen">
+      Middle
+      <div class="box inner" style="background-color: lightcoral">
+        Inner
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Page Navigation -->
+  <button id="scrollBtn">Cuộn đến phần giới thiệu</button>
+  <div style="height: 800px;"></div>
+  <div id="sectionIntro" class="section">Phần giới thiệu</div>
+
+  <hr>
+
+  <!-- DOM Traversing -->
+  <div class="box" id="traverseBox">
+    <h2 id="heading">Tiêu đề chính</h2>
+    <p>Đoạn văn thứ nhất</p>
+    <p>Đoạn văn thứ hai</p>
+  </div>
+
+  <hr>
+
+  <!-- Event Handler with Arguments -->
+  <div id="productList"></div>
+
+  <script src="Bai1+2.js"></script>
+  <script src="Bai3.js"></script>
 </body>
 </html>
