@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "title": "Sản phẩm hot",
+      "name": "Giày thể thao",
+      "price": 350000,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.g9-1vfslSCzpnh3RVuZWywHaHa?pid=Api&P=0&h=220",
+      "id": "3"
+    },
+    {
+      "title": "Sản phẩm mới",
+      "name": "Mũ lưỡi trai",
+      "price": 80000,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.vRX2gRnJ-rjjUE5T4fwJmQHaHa?pid=Api&P=0&h=220",
+      "id": "4"
+    },
+    {
+      "title": "Sản phẩm mới",
+      "name": "Quần jeans",
+      "price": 250000,
+      "image": "https://tse1.mm.bing.net/th/id/OIP._5kKOe454wEAci8UAzTTIAHaHa?pid=Api&P=0&h=220",
+      "id": "2"
+    }
+  ]
+}
