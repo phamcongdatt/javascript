@@ -1,25 +1,39 @@
 {
-  "products": [
+  "product": [
     {
-      "title": "Sản phẩm hot",
-      "name": "Giày thể thao",
-      "price": 350000,
-      "image": "https://tse1.mm.bing.net/th/id/OIP.g9-1vfslSCzpnh3RVuZWywHaHa?pid=Api&P=0&h=220",
-      "id": "3"
+      "id": "1",
+      "title": "ao ni 2025",
+      "quantity": 1000,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.2",
+      "category": "ao"
     },
     {
-      "title": "Sản phẩm mới",
-      "name": "Mũ lưỡi trai",
-      "price": 80000,
-      "image": "https://tse3.mm.bing.net/th/id/OIP.vRX2gRnJ-rjjUE5T4fwJmQHaHa?pid=Api&P=0&h=220",
-      "id": "4"
+      "id": "2",
+      "title": "ao ni 2024",
+      "quantity": 2000,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.3",
+      "category": "ao"
     },
     {
-      "title": "Sản phẩm mới",
-      "name": "Quần jeans",
-      "price": 250000,
-      "image": "https://tse1.mm.bing.net/th/id/OIP._5kKOe454wEAci8UAzTTIAHaHa?pid=Api&P=0&h=220",
-      "id": "2"
+      "id": "0054",
+      "title": "sanpham1",
+      "quantity": 23,
+      "imageUrl": "https://tse1.mm.bing.net/th/id/OIP.3",
+      "category": "Áo"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "user1",
+      "email": "user1@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "fbc2",
+      "email": "dat@gmail.com",
+      "password": "Dat@2005",
+      "name": "Phạm công Đạt"
     }
   ]
 }

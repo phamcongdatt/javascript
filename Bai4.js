@@ -18,7 +18,7 @@ function render(products) {
   products.forEach((p) => {
     productList.innerHTML += `
       <tr>
-        <td><img src="${p.image}" width="50"/></td>
+        <td><img src="${p.image}" width="50"/></td> 
         <td>${p.title}</td>
         <td>${p.name}</td>
         <td>${p.price} VNĐ</td>
@@ -48,20 +48,25 @@ form.addEventListener("submit", async (e) => {
   const newProduct = { title, name, price, image };
 
   try {
-    if (editId) {
-      await fetch(`${API}/${editId}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newProduct),
-      });
-      editId = null;
-    } else {
-      await fetch(API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newProduct),
-      });
-    }
+        if (editId !== null) {
+        // Cập nhật
+        await fetch(`${API}/${editId}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newProduct),
+        });
+        editId = null;
+        } else {
+        // Thêm mới
+        const res = await fetch(API, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newProduct),
+        });
+
+        const createdProduct = await res.json();
+        }
+            
 
     form.reset();
     fetchProducts();
@@ -72,15 +77,21 @@ form.addEventListener("submit", async (e) => {
 
 // Sửa
 window.editProduct = async (id) => {
-  const res = await fetch(`${API}/${id}`);
-  const p = await res.json();
+  try {
+    const res = await fetch(`${API}/${id}`);
+    if (!res.ok) throw new Error("Không tìm thấy sản phẩm");
 
-  document.getElementById("title").value = p.title;
-  document.getElementById("name").value = p.name;
-  document.getElementById("price").value = p.price;
-  document.getElementById("image").value = p.image;
-  editId = id;
+    const p = await res.json();
+    document.getElementById("title").value = p.title;
+    document.getElementById("name").value = p.name;
+    document.getElementById("price").value = p.price;
+    document.getElementById("image").value = p.image;
+    editId = id;
+  } catch (err) {
+    alert("Lỗi khi sửa: " + err.message);
+  }
 };
+
 
 // Xoá
 window.deleteProduct = async (id) => {
